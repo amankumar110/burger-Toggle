@@ -1,16 +1,6 @@
-let icon = document.getElementById("burgicon");
-let navlinks = document.querySelector("#navlinks");
-icon.addEventListener("click", () => {
-    let NavDiv = document.getElementById("NavDiv");
-    if (NavDiv.style.display != "none") {
-      NavDiv.style.display = "none";
-      navlinks.style.opacity = 1;
+const icon = document.getElementById('burgicon');
+const div = document.getElementById("NavDiv");
 
-    }
-    else {
-      NavDiv.style.display = "flex";
-
-      navlinks.style.opacity = 0;
-    }
-
-  });
+icon.addEventListener("click", function () {
+    div.classList.toggle("show");
+});

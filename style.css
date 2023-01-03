@@ -15,101 +15,155 @@ nav {
   font-family: "Aboreto", cursive;
   padding: 10px;
 }
+
 .navlogo {
   margin-right: auto;
   font-size: 1.7rem;
   padding: 0 12px;
+  cursor: pointer;
 
   color: #fff;
 }
+
 nav ul {
   display: flex;
   list-style: none;
 }
+
 .navlinks {
-  padding: 12px;
+  padding: 20px;
   opacity: 1;
 }
+.navlinks:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .navlinks a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
 }
 
-nav p {
+
+#burgicon {
   color: white;
   font-size: 35px;
   cursor: pointer;
-  opacity: 0.01;
+  display: none;
 }
-nav p:active {
+
+#burgicon:active {
   color: white;
   font-size: 35px;
   transform: rotate(90deg);
 
   cursor: pointer;
 }
+
 #NavDiv {
-  background-color: black;
+  background-color: gainsboro;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 30px;
-  opacity: 0.01;
+  position: fixed;
+  /* top: 0; */
+  left: 100%;
+  transition: all 0.3s linear;
+  width: 100%;
 }
+
 #NavDiv a {
-  color: white;
+  color: #308c00;
   font-size: 2rem;
   text-decoration: none;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+
 }
+
 .descriptiondiv {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 20px 0;
-  border-bottom: 1px solid darkgrey;
-  margin-bottom: 30px;
+  overflow-x: hidden;
+
+  height: 50vh;
+
 }
-.description {
-  max-width: 70vw;
-  font-size: 1.2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.img-div {
+
+.ad {
+  flex: 1;
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px;
-
   flex-direction: column;
+  font-family: "Aboreto", cursive;
+  ;
 }
 
+.ad2 {
+  flex: 1;
+  height: 100%;
+}
+
+.description {
+
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex: 3;
+  height: 100%;
+  padding: 15px;
+}
+
+.searchicon {
+  width: 60px;
+  height: 60px;
+  border: 1px white;
+  border-radius: 30px;
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  background-color: gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+
+
+}
+
+.search {
+  color: #308c00;
+  display: block;
+  font-size: 2rem;
+}
+
+#NavDiv.show {
+  left: 0;
+}
+.container{
+  max-width: 80vw;
+  margin-inline: auto;
+  margin-top: 50px;
+}
 @media screen and (max-width: 913px) {
-  nav p {
-    opacity: 1;
+  #burgicon {
+
     display: block;
   }
+
   .navlinks {
     display: none;
   }
+
   #NavDiv {
-    opacity: 1;
+    display: flex;
   }
-}
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-}
-footer h3{
-    text-align: center;
-    font-size: 2rem;
-}
-footer p{
-  max-width: 40vw;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1rem;
 }
